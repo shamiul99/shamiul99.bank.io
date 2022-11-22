@@ -2,8 +2,9 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.allitemcenter{
+.allitemcenter, .dashboard{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,6 +37,8 @@
     display: block;
     font-size:20px;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
 }
 .single-input{
     display:grid;
@@ -59,4 +62,74 @@
 .submit_btn input{
     width:50%;
     padding:8px 0px;
+}
+.amount-section{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    flex-wrap:wrap;
+    margin-bottom: 20px;
+}
+.amount-section .amount-item{
+    background:#5E4FC6;
+    color: #fff;
+    padding:10px;
+    margin-right:20px;
+    border-radius:5px;
+}
+.amount-section .amount-item:last-child{
+    margin-right:0;
+}
+.amount-section .mid-color{
+    background:#F09670;
+}
+.amount-section .last-color{
+    background: #EF9B01;
+}
+.amount-item h1{
+    font-size:45px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.amount-item h2{
+    font-size:25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.input-amount{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+.input-amount .deposit, .input-amount .withdraw{
+    padding:20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width:100%;
+    margin-right:15px;
+}
+.input-amount .withdraw{
+    margin-right:0;
+}
+.deposit h2, .withdraw h2{
+    margin-bottom: 10px;
+}
+.deposit input, .withdraw input{
+    width:100%;
+    padding:8px;
+    border:1px solid lightgray;
+    border-radius:5px;
+    margin-bottom: 10px;
+}
+.deposit input:focus, .withdraw input:focus{
+    outline:none;
+}
+.deposit button, .withdraw button{
+    padding:5px 12px;
+    background:rgb(30, 168, 30);
+    color: #fff;
+    font-weight: bold;
+    border:none;
+    cursor: pointer;
+}
+.dashboard{
+    display:none;
 }
