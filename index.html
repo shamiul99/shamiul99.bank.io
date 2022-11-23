@@ -34,7 +34,7 @@
             <div class="amount-section">
                 <div class="amount-item">
                     <h2 class="amount-name">Deposit</h2>
-                    <h1 class="amount">$ 00</h1>
+                    <h1 class="amount">$ <span id="latest-deposit">0</span></h1>
                 </div>
                 <div class="amount-item mid-color">
                     <h2 class="amount-name">Withdraw</h2>
@@ -42,14 +42,14 @@
                 </div>
                 <div class="amount-item last-color">
                     <h2 class="amount-name">Balance</h2>
-                    <h1 class="amount">$ 00</h1>
+                    <h1 class="amount">$ <span id="balance">0</span></h1>
                 </div>
             </div>
             <div class="input-amount">
                 <div class="deposit">
                     <h2>Deposit</h2>
-                    <input type="text" placeholder="$ amount you want to deposit">
-                    <button type="button">Deposit</button>
+                    <input type="number" id="depositInput" placeholder="$ amount you want to deposit">
+                    <button type="button" class="depositBtn">Deposit</button>
                 </div>
                 <div class="withdraw">
                     <h2>Withdraw</h2>
