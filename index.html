@@ -38,7 +38,7 @@
                 </div>
                 <div class="amount-item mid-color">
                     <h2 class="amount-name">Withdraw</h2>
-                    <h1 class="amount">$ 00</h1>
+                    <h1 class="amount">$ <span id="latest-withdraw">0</span></h1>
                 </div>
                 <div class="amount-item last-color">
                     <h2 class="amount-name">Balance</h2>
@@ -53,8 +53,8 @@
                 </div>
                 <div class="withdraw">
                     <h2>Withdraw</h2>
-                    <input type="text" placeholder="$ amount you want to withdraw">
-                    <button type="button">Withdraw</button>
+                    <input type="number" id="withdrawAmount" placeholder="$ amount you want to withdraw">
+                    <button type="button" id="addWithdraw">Withdraw</button>
                 </div>
             </div>
         </div>
