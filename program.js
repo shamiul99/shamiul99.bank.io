@@ -35,9 +35,13 @@ function updateSpantext(id,depositInputNumber){
 //withdraw amount
 function withdrawMoney(){
     let withdrawNumber = getInputNumber('#withdrawAmount');
-    updateSpantext('#latest-withdraw',withdrawNumber);
-    updateSpantext('#balance', -1 * withdrawNumber);
-    document.querySelector('#withdrawAmount').value = '';
+    if(isNaN(withdrawNumber)){
+        alert('wrong.. please try again.');
+    }else{
+        updateSpantext('#latest-withdraw',withdrawNumber);
+        updateSpantext('#balance', -1 * withdrawNumber);
+        document.querySelector('#withdrawAmount').value = '';
+    }
 }
 //parseFloat Function
 function getInputNumber(id){
@@ -53,7 +57,7 @@ function getInputNumber(id){
 function nextItem(e){
     let parentElement = form.parentElement.parentElement;
     let dashboard = document.querySelector('.dashboard');
-    if(confirm("Are You Remove?")){
+    if(confirm("Are you Login Now?")){
         parentElement.style.display = 'none';
         dashboard.style.display = 'grid';
         
